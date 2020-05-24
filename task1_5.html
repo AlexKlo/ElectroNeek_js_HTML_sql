@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Web-форма для отправки контактных данных 3</h1>
+
+
+<p>ФИО:</p>
+<input type="text" size="40" id="fio">
+
+<p>Телефон</p>
+<input type="text" size="40" id="ph">
+
+<p>Комментарий:</p>
+<input type="comment" size="40" id="cm">
+
+<br><br><input type="button" onclick="send_button()" value="Send" id='b_id0'/>
+
+
+<script>
+	class Person{
+    name = "Ivanov Ivan Ivanovich";
+    phone = "(+7)964-276-42-40";
+    comment = "25 years old";
+    	constructor(){}
+        
+        Send(){
+        	return [this.name, this.phone, this.comment];
+        }
+    }
+
+    function send_button(){
+    const pr = new Person();   
+    document.getElementById("fio").value = pr.Send()[0];
+    document.getElementById("ph").value = pr.Send()[1];
+    document.getElementById("cm").value = pr.Send()[2];
+    send_function();
+    }
+    
+    function send_function(){}
+</script>
+
+
+</body></html>

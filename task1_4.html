@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!-- saved from url=(0062)file:///C:/Users/Alexey/Desktop/ElectoNeek%20test/task1_3.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1251"></head><body>
+
+<h1>Web-форма для отправки контактных данных 2</h1>
+
+<p>ФИО:</p>
+<input type="FIO" size="40">
+
+<div id="divf">
+<p>Телефон</p>
+<input type="text" size="40">
+<input type="button" onclick="add_input()" value="+" id='b_id0'/>
+</div>
+
+<p>Комментарий:</p>
+<input type="comment" size="40">
+
+<script>
+	var x = 0;
+    function add_input(){
+    var id = 'b_id' + x;
+    document.getElementById(id).remove();
+    var n = x + 2;
+    x++;
+    document.getElementById('divf').innerHTML+='<br> <p>Телефон №' + n +'</p> <input type=text size="40" id="id'+x+'"> <input type="button" onclick="add_input()" value="+" id="b_id'+x+'"/>'
+    }
+</script>
+
+
+</body></html>
